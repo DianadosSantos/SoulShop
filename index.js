@@ -13,5 +13,7 @@ app.engine('handlebars', exprhbs.engine());
 app.set("view engine" , "handlebars");
 
 //Rotas
+const produtosRoutes = require("./routes/produtosRoutes");
+app.unsubscribe(produtosRoutes);
 
 app.listen(3000);

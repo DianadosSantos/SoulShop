@@ -1,5 +1,5 @@
 require("dotenv/config"); // defini variavel de ambiente
-
+require('./database')
 const express = require('express');
 const exprhbs = require('express-handlebars');
 
@@ -14,6 +14,6 @@ app.set("view engine" , "handlebars");
 
 //Rotas
 const produtosRoutes = require("./routes/produtosRoutes");
-app.unsubscribe(produtosRoutes);
+app.use(produtosRoutes);
 
 app.listen(3000);

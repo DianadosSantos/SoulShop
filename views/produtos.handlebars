@@ -1,4 +1,4 @@
-<section class="m-1">
+<section class="m-3">
     <a href="/produtos/novo" class="btn btn-dark">
     <i class="bi bi-plus"></i>
     Criar produto
@@ -37,14 +37,21 @@
                         <td>
                             <div class="d-flex">
                                 <div>
-                                    <a href="/produtos/editar" class="btn btn-sm btn-warning mb-1">
+                                    <a href="/produtos/editar/{{this._id}}" class="btn btn-sm btn-warning mb-1">
                                         <i class="bi bi-pencil"></i>
                                     </a>
                                 </div>
                                 <div>
-                                    <a href="/produtos/deletar" class="btn btn-sm btn-danger mb-1">
-                                        <i class="bi bi-trash"></i>
-                                    </a>
+                                    <form action="/produtos/deletar" method="POST">
+                                        <input 
+                                        name="id" 
+                                        type="hidden"
+                                        value="{{this._id}}"
+                                        />
+                                        <button class="btn btn-sm btn-danger mb-1">
+                                            <i class="bi bi-trash"></i>
+                                        </button>
+                                    </form>
                                 </div>
                             </div>
                         </td>
